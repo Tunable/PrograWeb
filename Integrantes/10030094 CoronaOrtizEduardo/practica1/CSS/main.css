@@ -1,0 +1,177 @@
+html,
+button,
+input,
+select,
+testarea
+{
+	color:green;
+}
+body{
+		font-size:1em;
+		line-height:1.4;
+		font: 16px helvetica;
+	}
+			.container
+			{
+				width:90%;
+				padding:3px;
+		
+				margin:3px 6px;/*margen con 3 arriba,abajo 6 pixeles izquierda,derecha*/
+		
+				margin:3px 6px 3px 6px;/*pixeles para cada margen en respecto a las manecillas del reloj*/
+		
+				margin: 3px;/*margen global para todos los lados*/
+		
+				margin-left: 6px;/*margen izquierdo*/
+				margin-right: 6px;/*margen derecho*/
+				margin-top: 3px;/*margen de arriba*/
+				margin-bottom: 3px;/*margen abajo*/
+			}
+			/*color de sitio web*/
+			.header-container
+			{
+				border-bottom: 20px solid #e44d26;
+			}
+			.footer-container,
+		
+			.main aside
+			{
+				border-top: 20px solid #e44d26;
+			}
+			.tittle
+			{
+				color: white;
+			}
+			/* menu*/
+			nav ul
+			{
+				margin: 0;
+				padding:0;
+			}
+			nav a
+			{
+				display:block;
+				margin-bottom:10px;
+				padding:15px;
+				text-align:center;
+				text-decoration:none;
+				font-weight: bold;
+				color: white;
+				background: #e44d26;
+			}
+			nav a:hover,
+			van a:visited
+			{
+				color: white;
+			}
+			nav a:hover
+			{
+				text-decoration:underline;
+			}
+			nav li
+			{
+				list-style:none;
+			}
+			.main
+			{
+				padding:30px 0;
+			}
+			.main article h1
+			{
+				font-size: 2em;
+			}
+			.main aside
+			{
+				color: white;
+				padding: 0px 5% 10px;
+			}
+			.footer-container footer
+			{
+				color: white;
+				padding: 20px 0;
+			}
+			.clearfix:before,
+			.clearfix:after
+			{
+				content: " ";
+				display: table;
+			}
+			.clearfix:after
+			{
+				clear:both;
+			}
+			@media only screen and (min-width: 480px)
+		{
+				/*  aplica a  pantallas más anchas de 480px  */
+			.title
+			{
+				font-family: 'Jacques Francois', serif;
+			}
+			h1
+			{
+				color:red;
+			}
+			nav a
+			{
+				float:left;
+				width:27%;
+				margin: 0 1.7%;
+				padding:25px 2%;
+				margin-bottom: 0;
+			}
+			nav li:first-child a
+			{
+				margin-left:0;
+			}
+			
+			nav li:last-child a
+			{
+				margin-right:0;
+			}
+			nav ul li
+			{
+				display:inlie;
+			}
+		}/*  fin 480px  */
+		
+		@media only screen and (min-width: 780px)
+		{
+			header-container,
+			.main aside
+			{
+				-webkit-box-shadow: 0 5px 10px #aaa;/*safari y chrome*/
+				-moz-box-shadow: 0 5px 10px #aaa;/*mozilla*/
+				box-shadow: 0 5px 10px #aaa;
+				
+				border:groove 15px #0ba10b;
+				-moz-border-radius: 43px;
+				-webkit-border-radius: 43px;
+				border-radius: 43px;
+			}
+			.title
+			{
+			font-family: 'Kelly Slab', cursive;
+			}
+			.title
+			{
+				float:right;
+			}
+			nav
+			{
+				float:left;
+				width:38%;
+			}
+			.main article
+			{
+				float:right;
+				width:57%;
+			}			
+			.main aside
+			{
+				float:left;
+				width:28%;
+			}
+
+		}	
+		
+		
