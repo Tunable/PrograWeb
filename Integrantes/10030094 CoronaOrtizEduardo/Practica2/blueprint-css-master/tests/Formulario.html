@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Components &middot; Flat UI Free</title>
+    <title>Practik 3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Loading Bootstrap -->
@@ -12,57 +12,137 @@
     <!-- Loading Flat UI -->
     <link href="css/flat-ui.css" rel="stylesheet">
     <link href="css/docs.css" rel="stylesheet">
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
- 
 
     <link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 	
-	<script src="js/jquery-1.8.3.min.js"></script>
-    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
-    <script src="js/jquery.ui.touch-punch.min.js"></script>
-	
-	<script src="jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.datepicker.js">
-	</script>
-	
-	<script>
-	$ (function(){
-	$( "#Fecha-Nacimiento").datepicker();
-	});
-	
-	</script>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
     <![endif]-->
+	
+	<script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+	
+	<script src="jquery-ui-1.10.3.custom\development-bundle/ui/jquery.ui.datepicker.js"></script>
+	
+	<script>
+		
+		var url= document.location.href;
+		//alert(url);
+		
+		var url2=url.split('?')[1];
+		//alert(url2);
+		
+		var datos=url2.split('&');
+	
+		var x= datos.length;
+		for(var i=0; i< x; i++)
+		{
+			//alert(datos[i]);
+		}
+		
+		
+		
+		$(function () {
+			$("#fecha-nacimiento").datepicker();
+			$("select").selectpicker({style: 'btn-hg btn-primary', menuStyle: 'dropdown-inverse'});
+		});
+	</script>	
+	
+	
+	
   </head>
   <body>
+  
 	<div class="container">
-		  <form action="datos.html" method="GET">
-				<label for="nombre">Nombre</label>
-				<input type="text" id="Nombre" name="Nombre" class="form-control" required autofocus/></input>
+	
+		<script>
+			for(var i=0;i<x;i++)
+			{
+				document.write('<p>'+datos[i]+'</p>');
+			}
+		</script>
+	
+	
+	
+		<form action="" method="GET" >
+			<label for="nombre " > Nombre: </label>
+			<input type="text" id="nombre" name="nombre " class="form-control" required autofocus/>			
+
+			
+			<label for="apellidoP " > Apellido Paterno: </label>
+			<input type="text" id="apellidoP" name="apellidoP " class="form-control" required />			
+
+			
+			<label for="apellidoM " > Apellido Materno: </label>
+			<input type="text" id="apellidoM" name="ApellidoM " class="form-control" required />			
+
+			
+			<label for="mail " > E-mail: </label>
+			<input type="text" id="mail" name="mail " class="form-control" required />
+			
+			<label for="fecha-nacimiento " > Fecha de nacimiento: </label>
+			<input type="date" id="fecha-nacimiento" name="fecha-nacimiento " class="form-control" required />
+			
+			<label for="genero">Genero: </label><br/>
+			
+				<label class="radio">Femenino:
+					<input type="radio" name="genero" value "F" data-toggle="radio">
+				</label>
+				<label class="radio">Masculino:
+					<input type="radio" name="genero" value "M" data-toggle="radio">
+				</label> <br/>
 				
-				
-				<label for="Apellido Paterno">Apellido Paterno</label>
-				<input type="text" id="Apellido Paterno" name="Apellido Paterno" class="form-control" required/></input>
-				
-				
-				<label for="Apellido Materno">Apellido Materno</label>
-				<input type="text" id="Apellido Materno" name="Apellido Materno" class="form-control" required/></input>
-				
-				<label for="E-Mail">E-mail</label>
-				<input type="text" id="E-mail" name="E-mail" class="form-control" required/></input>
-				
-				<label for="Fecha-Nacimiento">Fecha de nacimiento</label>
-				<input type="date" id="Fecha-Nacimiento" name="Fecha-nacimiento" class="form-control" required/></input>
-				
-				
-				<input type="submit" values="Enviar" class="btn btn-hg btn-primary"></input><!--boton de enviar-->
-		  </form>
-	 </div>
-		  
-   <!-- Load JS here for greater good =============================-->
-    
+			<label for="comentarios">Comentarios:</label>
+			<textarea name="comentarios" id="comentarios">
+			</textarea>
+			
+			
+			<label class="checkbox" for="checkbox1">
+				<input type="checkbox" value="" id="checkbox1" data-toggle="checkbox">
+					Opcion1
+			</label>
+			
+			<label class="checkbox" for="checkbox2">
+				<input type="checkbox" value="" id="checkbox2" data-toggle="checkbox">
+					Opcion2
+			</label>
+			
+			<label class="checkbox" for="checkbox2">
+				<input type="checkbox" value="" id="checkbox2" data-toggle="checkbox">
+					Opcion3
+			</label>
+			
+			<select name="estados">
+				<option value="001">Guanajuato</option>
+				<option value="002">Aguascalientes</option>
+				<option value="003">Jalisco</option>
+				<option value="004">Etc...</option>
+			</select>
+
+
+			
+			
+			<br/>
+			<input type="submit" value="Enviar" class="btn btn-primary" />
+			
+
+			
+			
+			
+			
+			
+		
+		</form>
+	</div>
+  
+  
+  
+  <!-- Load JS here for greater good =============================-->
+
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-select.js"></script>
     <script src="js/bootstrap-switch.js"></script>
@@ -72,4 +152,5 @@
     <script src="js/jquery.placeholder.js"></script>
     <script src="bootstrap/js/google-code-prettify/prettify.js"></script>
     <script src="js/application.js"></script>
-	</body>
+  </body>
+</html>
