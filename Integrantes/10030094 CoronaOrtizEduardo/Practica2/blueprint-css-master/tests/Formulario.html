@@ -29,28 +29,39 @@
 	<script src="jquery-ui-1.10.3.custom\development-bundle/ui/jquery.ui.datepicker.js"></script>
 	
 	<script>
-		
+		$(document).ready(function(){
 		var url= document.location.href;
-		//alert(url);
-		
 		var url2=url.split('?')[1];
-		//alert(url2);
-		
 		var datos=url2.split('&');
-	
 		var x= datos.length;
-		for(var i=0; i< x; i++)
-		{
-			//alert(datos[i]);
-		}
+		var html="";
 		
-		
-		
-		$(function () {
+		for(var i=0;i<x;i++)
+			{
+				html=html +'<p>'+datos[i].split('=')[0]+'</p>';
+				html=html +'<p>'+datos[i].split('=')[1]+'</p>';
+			}
+			//alert(html)
+			$("#resultado").hide();
+			$("#resultado").html(html);
+			//$("#resultado").show('slow');
+			
 			$("#fecha-nacimiento").datepicker();
 			$("select").selectpicker({style: 'btn-hg btn-primary', menuStyle: 'dropdown-inverse'});
+			
+			$("#btn1").click(function(){
+				
+				//$("#resultado").toggle('slow');
+				$(this).slideUp(600);
+				$(this).delay(900);
+				$(this).fadeIn(800);
+				
+			});
+			
+			
 		});
-	</script>	
+			
+</script>	
 	
 	
 	
@@ -58,15 +69,12 @@
   <body>
   
 	<div class="container">
-	
-		<script>
-			for(var i=0;i<x;i++)
-			{
-				document.write('<p>'+datos[i]+'</p>');
-			}
-		</script>
-	
-	
+		
+		<button id="btn1" class="btn btn-primary">Resultado			
+		</button>
+		<div id="resultado">
+				
+		</div>
 	
 		<form action="" method="GET" >
 			<label for="nombre " > Nombre: </label>
